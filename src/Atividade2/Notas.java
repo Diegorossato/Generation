@@ -11,17 +11,17 @@ public class Notas {
 		Scanner Leia = new Scanner(System.in);
 		
 		System.out.println("\nDigite a primeira nota: ");
-		nota1 = (float) Leia.nextDouble();
+		nota1 = Leia.nextFloat();
 		System.out.println("\nDigite a segunda nota: ");
-		nota2 = (float) Leia.nextDouble();
+		nota2 = Leia.nextFloat();
 		System.out.println("\nDigite a tericera nota: ");
-		nota3 = (float) Leia.nextDouble();
+		nota3 = Leia.nextFloat();
 		System.out.println("\nDigite a quarta nota: ");
-		nota4 = (float) Leia.nextDouble();
+		nota4 = Leia.nextFloat();
 		
 		media = (nota1+nota2+nota3+nota4) / 4;
 			
-		System.out.println("\nSua média final é: " +media);
+		System.out.printf("\nSua média final é: %.2f" ,media);
 		
 
 	}

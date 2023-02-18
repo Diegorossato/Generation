@@ -6,16 +6,17 @@ public class Salario {
 
 	public static void main(String[] args) {
 		
-		float salario, abono, nsalario;
-		
 		Scanner Leia = new Scanner(System.in);
 		
+		double salario, abono, novoSalario;
+		
+		
 		System.out.println("\nDigite o seu salário: ");
-		salario = (float) Leia.nextDouble();
+		salario = Leia.nextDouble();
 		System.out.println("\nDigite o valor do abono: ");
-		abono = (float) Leia.nextDouble();
-		nsalario = salario+abono;
-		System.out.printf("O seu novo salário é %2f" ,nsalario);
+		abono = Leia.nextDouble();
+		novoSalario = salario+abono;
+		System.out.printf("O seu novo salário é %.2f" ,novoSalario);
 		
 	}
 
