@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Alunos</title>
+    <!-- Link para o arquivo CSS externo -->
+    <link rel="stylesheet" href="/static/cadastrados.css">
+</head>
+<body>
+<div class="container">
+    <h2>Lista de Alunos Cadastrados</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Nota Primeiro Semestre</th>
+            <th>Nota Segundo Semestre</th>
+            <th>Nome do Professor</th>
+            <th>Sala</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody id="alunoTableBody">
+        <!-- Os dados dos alunos serão inseridos aqui dinamicamente -->
+        </tbody>
+    </table>
+    <a href="cadastro.html" class="btn">Adicionar Novo Aluno</a>
+</div>
+
+<!-- Inclua o CDN do Axios antes do seu script JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<!-- Link para o arquivo JavaScript externo -->
+<script src="/static/cadastrados.js"></script>
+</body>
+</html>

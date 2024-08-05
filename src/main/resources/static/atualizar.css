@@ -1,0 +1,97 @@
+/* Estilo geral do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Fundo suave para o corpo */
+    color: #343a40; /* Cor do texto principal */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container principal */
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+}
+
+/* Título */
+h2 {
+    text-align: center;
+    color: #007bff; /* Cor do título */
+    margin-bottom: 20px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Estilo dos labels */
+label {
+    display: block;
+    margin: 12px 0 6px;
+    font-size: 1em;
+    color: #495057; /* Cor do texto dos labels */
+}
+
+/* Estilo dos campos de entrada */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+}
+
+/* Estilo do botão de envio */
+button[type="submit"] {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito ao passar o mouse no botão de envio */
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilo do botão adicional */
+.btn1 {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito ao passar o mouse no botão adicional */
+.btn1:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* Estilo das mensagens de erro */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
