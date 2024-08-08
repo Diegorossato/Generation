@@ -8,11 +8,11 @@ public class FrontendController {
 
     @GetMapping("/")
     public String home() {
-        return "redirect:/cadastrados";
+        return "redirect:/alunos";
     }
 
-    @GetMapping("/cadastrados")
-    public String cadastrados() {
-        return "cadastrados";
+    @GetMapping("/alunos")
+    public String alunos() {
+        return "alunos";
     }
 }
