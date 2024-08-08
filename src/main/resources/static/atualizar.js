@@ -1,10 +1,8 @@
-// URL da sua API
+
 const apiUrl = 'https://generation-uyl0.onrender.com/alunos';
 
-// Expressão regular para permitir apenas letras e espaços
 const nomeRegex = /^[A-Za-zÀ-ÿ\s]+$/;
 
-// Função para buscar dados de um aluno por ID
 async function getAlunoById(id) {
     try {
         const response = await axios.get(`${apiUrl}/${id}`);
@@ -15,7 +13,6 @@ async function getAlunoById(id) {
     }
 }
 
-// Função para preencher o formulário com os dados do aluno
 async function populateForm(id) {
     const aluno = await getAlunoById(id);
     if (aluno) {
@@ -31,11 +28,9 @@ async function populateForm(id) {
     }
 }
 
-// Função para validar o formulário
 function validateForm() {
     let isValid = true;
 
-    // Verificação e validação do campo nome
     const nome = document.getElementById('nome').value;
     if (!nome.trim()) {
         document.getElementById('nomeError').textContent = 'O nome do Aluno deve ser preenchido!';
@@ -47,7 +42,6 @@ function validateForm() {
         document.getElementById('nomeError').textContent = '';
     }
 
-    // Verificação e validação do campo professor
     const professor = document.getElementById('professor').value;
     if (!professor.trim()) {
         document.getElementById('professorError').textContent = 'O nome do Professor deve ser preenchido!';
@@ -62,13 +56,11 @@ function validateForm() {
     return isValid;
 }
 
-// Função para atualizar um aluno
 async function updateAluno(event) {
     event.preventDefault();
 
-    // Valida o formulário
     if (!validateForm()) {
-        return; // Não envia os dados se houver erros de validação
+        return;
     }
 
     const id = parseInt(document.getElementById('alunoId').value);
@@ -91,10 +83,8 @@ async function updateAluno(event) {
     }
 }
 
-// Obtém o ID do aluno da URL e preenche o formulário
 const urlParams = new URLSearchParams(window.location.search);
 const alunoId = parseInt(urlParams.get('id'));
 populateForm(alunoId);
 
-// Adiciona o listener de submit ao formulário
 document.getElementById('updateForm').addEventListener('submit', updateAluno);

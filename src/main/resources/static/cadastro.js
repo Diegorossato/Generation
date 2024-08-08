@@ -1,16 +1,13 @@
-// URL da sua API
+
 const apiUrl = 'https://generation-uyl0.onrender.com/alunos';
 
-// Adiciona o ouvinte de evento para o envio do formulário
 document.getElementById('alunoForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Impede o envio padrão do formulário
+    event.preventDefault();
 
     let isValid = true;
 
-    // Expressão regular para permitir apenas letras e espaços
     const nomeRegex = /^[A-Za-zÀ-ÿ\s]+$/;
 
-    // Verificação e validação do campo nome
     const nome = document.getElementById('nome').value;
     if (!nome.trim()) {
         document.getElementById('nomeError').textContent = 'O nome do Aluno deve ser preenchido!';
@@ -22,7 +19,6 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
         document.getElementById('nomeError').textContent = '';
     }
 
-    // Verificação e validação do campo idade
     const idade = document.getElementById('idade').value;
     if (!idade) {
         document.getElementById('idadeError').textContent = 'A idade do Aluno deve ser preenchida!';
@@ -31,7 +27,6 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
         document.getElementById('idadeError').textContent = '';
     }
 
-    // Verificação e validação do campo notaPrimeiro
     const notaPrimeiro = document.getElementById('notaPrimeiro').value;
     if (!notaPrimeiro) {
         document.getElementById('notaPrimeiroError').textContent = 'A nota do Primeiro Semestre deve ser preenchida!';
@@ -40,7 +35,6 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
         document.getElementById('notaPrimeiroError').textContent = '';
     }
 
-    // Verificação e validação do campo notaSegundo
     const notaSegundo = document.getElementById('notaSegundo').value;
     if (!notaSegundo) {
         document.getElementById('notaSegundoError').textContent = 'A nota do Segundo Semestre deve ser preenchida!';
@@ -49,7 +43,7 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
         document.getElementById('notaSegundoError').textContent = '';
     }
 
-    // Verificação e validação do campo professor
+
     const professor = document.getElementById('professor').value;
     if (!professor.trim()) {
         document.getElementById('professorError').textContent = 'O nome do Professor deve ser preenchido!';
@@ -61,7 +55,6 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
         document.getElementById('professorError').textContent = '';
     }
 
-    // Verificação e validação do campo sala
     const sala = document.getElementById('sala').value;
     if (!sala) {
         document.getElementById('salaError').textContent = 'A sala do Aluno deve ser preenchida!';
@@ -71,10 +64,9 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
     }
 
     if (!isValid) {
-        return; // Não envia os dados se houver erros de validação
+        return;
     }
 
-    // Coleta os dados do formulário
     const alunoData = {
         nome: nome,
         idade: parseInt(idade),
@@ -85,10 +77,9 @@ document.getElementById('alunoForm').addEventListener('submit', async function(e
     };
 
     try {
-        // Envia os dados para a API
         await axios.post(apiUrl, alunoData);
         alert('Aluno cadastrado com sucesso!');
-        window.location.href = 'cadastrados.html'; // Redireciona para a página cadastrados.html
+        window.location.href = 'cadastrados.html';
     } catch (error) {
         console.error('Erro ao cadastrar aluno:', error);
         alert('Erro ao cadastrar aluno!');

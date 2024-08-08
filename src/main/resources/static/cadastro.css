@@ -1,13 +1,12 @@
-/* Estilo geral do corpo */
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f9fa; /* Fundo suave para o corpo */
-    color: #343a40; /* Cor do texto principal */
+    background-color: #f8f9fa;
+    color: #343a40;
     margin: 0;
     padding: 0;
 }
 
-/* Container principal */
 .container {
     max-width: 600px;
     margin: 30px auto;
@@ -15,27 +14,24 @@ body {
     border: 1px solid #ddd;
     border-radius: 12px;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para destaque */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título */
 h2 {
     text-align: center;
-    color: #007bff; /* Cor do título */
+    color: #007bff;
     margin-bottom: 20px;
     font-size: 2em;
     font-weight: 600;
 }
 
-/* Estilo dos labels */
 label {
     display: block;
     margin: 12px 0 6px;
     font-size: 1em;
-    color: #495057; /* Cor do texto dos labels */
+    color: #495057;
 }
 
-/* Estilo dos campos de entrada */
 input[type="text"],
 input[type="number"] {
     width: 100%;
@@ -46,7 +42,6 @@ input[type="number"] {
     font-size: 1em;
 }
 
-/* Estilo do botão de envio */
 input[type="submit"] {
     display: block;
     margin: 20px auto;
@@ -61,13 +56,11 @@ input[type="submit"] {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Efeito ao passar o mouse no botão de envio */
 input[type="submit"]:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
 
-/* Estilo do botão adicional (Voltar) */
 .btn1 {
     display: block;
     margin: 20px auto;
@@ -83,13 +76,11 @@ input[type="submit"]:hover {
     transition: background-color 0.3s, transform 0.2s;
 }
 
-/* Efeito ao passar o mouse no botão adicional */
 .btn1:hover {
     background-color: #e0a800;
     transform: translateY(-2px);
 }
 
-/* Estilo das mensagens de erro */
 .error-message {
     color: red;
     font-size: 0.9em;

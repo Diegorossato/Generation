@@ -1,13 +1,12 @@
-/* Estilo geral do corpo */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f8f9fa; /* Cor de fundo suave */
-    color: #343a40; /* Cor do texto */
+    background-color: #f8f9fa;
+    color: #343a40;
     margin: 0;
     padding: 0;
 }
 
-/* Container principal */
 .container {
     max-width: 1200px;
     margin: 30px auto;
@@ -18,7 +17,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Título */
 h2 {
     text-align: center;
     color: #007bff;
@@ -27,7 +25,6 @@ h2 {
     font-weight: 600;
 }
 
-/* Estilo da tabela */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -50,7 +47,6 @@ tr:hover {
     background-color: #e2e6ea;
 }
 
-/* Estilo dos botões */
 .btn {
     display: block;
     margin: 20px auto;
@@ -71,7 +67,6 @@ tr:hover {
     transform: translateY(-2px);
 }
 
-/* Estilo dos botões de ação */
 .action-buttons button {
     padding: 8px 16px;
     margin: 0 4px;
