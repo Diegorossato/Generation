@@ -1,10 +1,9 @@
-
 const apiUrl = 'https://generation-uyl0.onrender.com/alunos';
 
 async function fetchAlunos() {
     try {
         const response = await axios.get(apiUrl);
-        return response.data; // Retorna os dados da resposta
+        return response.data;
     } catch (error) {
         console.error('Erro ao buscar alunos:', error);
         return [];
@@ -12,12 +11,15 @@ async function fetchAlunos() {
 }
 
 async function renderTable() {
+    console.log('renderTable chamado');
     const alunos = await fetchAlunos(); // Obtém os dados da API
     const tableBody = document.getElementById('alunoTableBody');
+
     if (!tableBody) {
         console.error('Elemento com ID alunoTableBody não encontrado.');
         return;
     }
+
     tableBody.innerHTML = '';
 
     alunos.forEach(aluno => {
@@ -56,4 +58,7 @@ async function deleteAluno(id) {
     }
 }
 
-window.onload = renderTable;
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM completamente carregado e analisado');
+    renderTable();
+});
