@@ -8,6 +8,6 @@ public class FrontendController {
 
     @GetMapping("/")
     public String home() {
-        return "redirect:/cadastrados";
+        return "redirect:/cadastrados.html";
     }
 }
