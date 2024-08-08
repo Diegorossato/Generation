@@ -1,5 +1,5 @@
 // URL da sua API
-const apiUrl = 'http://localhost:8080/alunos';
+const apiUrl = 'https://generation-uyl0.onrender.com/alunos';
 
 // Função para buscar os dados dos alunos da API
 async function fetchAlunos() {

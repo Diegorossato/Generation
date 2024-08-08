@@ -1,5 +1,5 @@
 // URL da sua API
-const apiUrl = 'http://localhost:8080/alunos';
+const apiUrl = 'https://generation-uyl0.onrender.com/alunos';
 
 // Expressão regular para permitir apenas letras e espaços
 const nomeRegex = /^[A-Za-zÀ-ÿ\s]+$/;

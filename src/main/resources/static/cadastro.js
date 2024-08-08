@@ -1,5 +1,5 @@
 // URL da sua API
-const apiUrl = 'http://localhost:8080/alunos';
+const apiUrl = 'https://generation-uyl0.onrender.com/alunos';
 
 // Adiciona o ouvinte de evento para o envio do formulário
 document.getElementById('alunoForm').addEventListener('submit', async function(event) {
